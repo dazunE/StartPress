@@ -22,3 +22,19 @@
 @mixin clearfix-after() {
 	clear: both;
 }
+
+@mixin backgroundGradient( $degree , $top, $middle, $bottom){
+    background: linear-gradient($degree, $top 0%, $middle 50%, $bottom 100%); /* W3C */
+}
+
+@mixin backgroundImage( $src , $attachment , $size ){
+	background-image: url($src);
+	background-attachment: $attachment;
+	background-size: $size;
+}
+
+@mixin middledBlockWrapper (){
+	display:table;
+	width: 100%;
+	height:100%;
+}

@@ -1,9 +1,16 @@
-.font-page__header{
-  height: 90vh;
-  background-image:linear-gradient(-128deg, #3b92ff 0%, #50aecd 47%, #3bffe2 100%);
-
-  .signup-wrapper{
-   background-image: url('media/svg/mountain.svg');
-   background-size: cover;
+.font-page_header{
+ 
+  position: fixed;
+  width: 100%;
+  
+  .navbar-brand{
+    img{
+      
+    }
+    span{
+      margin-left: 10px;
+      color: $color__text-nav;
+    }
   }
+
 }

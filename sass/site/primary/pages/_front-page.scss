@@ -1,0 +1,18 @@
+.banner-wapper{
+	@include backgroundGradient(-128deg,$color__background_start,$color__background_middle,$color__background_end);
+	height: 90vh;
+
+
+	.header-banner{
+	 @include backgroundImage('media/svg/mountain.svg', fixed , cover);
+	 @include middledBlockWrapper;
+
+		.banner-caption{
+
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+		}
+
+	}
+}

@@ -1,5 +1,12 @@
-$font__main: sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro:400,500');
+
+$font__main: 'Maven Pro', sans-serif;
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
+
+body{
+
+	font-family: $font__main;
+}

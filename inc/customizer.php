@@ -14,6 +14,12 @@ function start_press_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+	$wp_customize->add_setting('themename_theme_options[image_upload_test]', array(
+        'default'           => 'image.jpg',
+        'capability'        => 'edit_theme_options',
+        'type'           => 'option',
+
+    ));
 }
 add_action( 'customize_register', 'start_press_customize_register' );
 

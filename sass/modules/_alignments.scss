@@ -14,3 +14,12 @@
 	clear: both;
 	@include center-block;
 }
+
+.middled-image img{
+	display: block;
+	margin: 0 auto;
+}
+
+.text_center{
+	text-align: center;
+}

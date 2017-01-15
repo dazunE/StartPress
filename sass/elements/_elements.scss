@@ -40,3 +40,10 @@ figure {
 }
 
 @import "tables";
+
+.middled__image{
+	img{
+		display: block;
+		margin: 0 auto;
+	}
+}

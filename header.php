@@ -21,12 +21,33 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<header id="masthead" class="site-header font-page__header" role="banner">
-		 <div class="signup-wrapper">
-		 	<div class="middle-content conatiner">
-					<button class="signup-button btn">Get Started</button>
-			</div>
-		 </div>
+	<header id="masthead" class="site-header font-page_header">
+		<nav class="navbar navbar-toggleable-md main-navigation">
+			<!-- Site Branding -->
+		  	<a class="navbar-brand" href="<?php echo esc_url(home_url('/'));?>">
+				<img src="<?php echo get_stylesheet_directory_uri()?>/media/svg/logo.png" width="100" height="100" class="d-inline-block" alt="">
+				<span><?php echo bloginfo('name');?></span>
+			</a>
+			<!-- end branding -->
+		  	<!-- navigation -->
+			  <div class="collapse navbar-collapse">
+					<ul class="nav justify-content-end">
+					  <li class="nav-item">
+					    <a class="nav-link" href="#">Courses</a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link" href="#">Instructors</a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link" href="#">About Us</a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link" href="#">Sign In</a>
+					  </li>
+					</ul>
+			  </div>
+		  	<!--end navigation -->
+		</nav>
 	</header>
 
 	<div id="content" class="site-content">

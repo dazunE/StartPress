@@ -105,7 +105,12 @@ add_action( 'widgets_init', 'start_press_widgets_init' );
  * Enqueue scripts and styles.
  */
 function start_press_scripts() {
+
+	wp_enqueue_style( 'bootstrap-4-alpha', get_stylesheet_directory_uri().'/css/bootstrap.min.css');
+
 	wp_enqueue_style( 'start-press-style', get_stylesheet_uri() );
+
+	wp_enqueue_script( 'bootstrap-4-alpha', get_stylesheet_directory_uri(). '/js/bootstrap.min.js', array('jquery'), '2017112',true );
 
 	wp_enqueue_script( 'start-press-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

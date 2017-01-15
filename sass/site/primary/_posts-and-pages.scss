@@ -1,3 +1,22 @@
+/*---------- Page Templates ------------*/
+
+#page{
+	position: relative;
+}
+
+@import 'pages/pages';
+
+.image__intro{
+	padding: 3rem 0;
+	background-color: $color__background-screen;
+}
+
+.has_background_image{
+	@include backgroundImage('media/svg/grdient-bg.svg', fixed , cover);
+	padding: 3rem 0;
+	color: $color__background-body;
+}
+
 .sticky {
 	display: block;
 }
@@ -19,7 +38,8 @@
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin:0;
+	padding:0;
 }
 
 .page-links {

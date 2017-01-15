@@ -25,7 +25,7 @@ gulp.task( 'server', function() {
     // change 'playground' to whatever your local Nginx/Apache vhost is set
     // most commonly 'http://localhost/' or 'http://127.0.0.1/'
     // See http://www.browsersync.io/docs/options/ for more information
-    proxy: 'reachyourpeak.com.au'
+    proxy: "wplms.com"
   });
 
   // Reload the browser if any .php file changes within this directory
@@ -35,6 +35,7 @@ gulp.task( 'server', function() {
   watch( './sass/**/*.scss', function() {
     gulp.start( 'scss' );
   });
+
 
   // Watch our JavaScript files and report any errors. May ruin your day.
   watch( './js/**/*.js', function() {
