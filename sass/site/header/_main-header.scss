@@ -1,16 +1,45 @@
-.font-page_header{
- 
-  position: fixed;
-  width: 100%;
-  
-  .navbar-brand{
-    img{
-      
+body{
+
+    .site-header{
+   
+    position: fixed;
+    width: 100%;
+    
+    .navbar-brand{
+      img{
+        @include Anim(width , 1s)
+      }
+      span{
+        margin-left: 10px;
+        color: $color__text-nav;
+      }
     }
-    span{
-      margin-left: 10px;
-      color: $color__text-nav;
+
+    &.header-visible {
+      background-color: fade_out($color__background_body, 0.2);
+      @include navBoxsadow();
+      z-index: 99;
+      .navbar-brand{
+        span{
+          color: $color__link;
+        }
+        img{
+          width:50px;
+        }
+      }
+    }
+
+  }
+
+  &:not(.home){
+    .navbar-brand{
+      img{
+        width: 60px;
+      }
     }
   }
 
 }
+
+
+

@@ -44,7 +44,7 @@ function start_press_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'menu-1' => esc_html__( 'Primary', 'start-press' ),
+		'main-nav' => esc_html__( 'Primary', 'start-press' ),
 	) );
 
 	/*
@@ -79,9 +79,34 @@ add_action( 'after_setup_theme', 'start_press_setup' );
  * @global int $content_width
  */
 function start_press_content_width() {
+
 	$GLOBALS['content_width'] = apply_filters( 'start_press_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'start_press_content_width', 0 );
+
+/**
+ * Nav item class filter
+ *
+*/
+
+function start_press_nav_item_class( $classes , $item ) {
+
+	$classes[] = 'nav-item';
+
+	return $classes;
+}
+
+add_filter('nav_menu_css_class', 'start_press_nav_item_class', 10, 2 );
+
+function start_press_nav_item_link_class ( $atts , $item , $args ) {
+
+	$atts['class'] = 'nav-link';
+
+	return $atts;
+}
+
+add_filter('nav_menu_link_attributes' , 'start_press_nav_item_link_class' , 10, 3 );
+
 
 /**
  * Register widget area.

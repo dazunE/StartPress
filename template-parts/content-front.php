@@ -9,7 +9,7 @@
  */
 
 ?>
-<div class="page-content block">
+<div id="post-<?php the_ID(); ?>" <?php post_class('page-content block'); ?>>
 
 	<section class="inner-block image__intro">
   		<div class="container">
@@ -31,6 +31,54 @@
 	<section class="inner-block image__intro has_background_image">
 		<div class="container text_center">
 			<h1>Every lession is part of the Game </h1>
+			<div class="row">
+				<div class="col-md-4 col-xs-12">
+				  	<div class="has-icon left-aligned">
+				  		<span class="svg-icon">
+				  			<img src="<?php echo get_stylesheet_directory_uri();?>/media/svg/icon-1.svg">
+				  		</span>
+				  		<div class="content">
+				  			<h4>Real Gaming Experince</h4>
+				  			<p>Each lesson includes a variety of pictures, puzles , multiple hoise questions and math based challenges.</p>
+				  		</div>
+				  	</div>
+				  	<div class="has-icon left-aligned">
+				  		<span class="svg-icon">
+				  			<img src="<?php echo get_stylesheet_directory_uri();?>/media/svg/icon-2.svg">
+				  		</span>
+				  		<div class="content">
+				  			<h4>Real Gaming Experince</h4>
+				  			<p>Each lesson includes a variety of pictures, puzles , multiple hoise questions and math based challenges.</p>
+				  		</div>
+				  	</div>
+				</div>
+				<div class="col-md-4 col-xs-12">
+				  	<div class="middled-image">
+				  		<img src="<?php echo get_stylesheet_directory_uri();?>/media/svg/lession-game.svg">
+				  	</div>
+				</div>
+				<div class="col-md-4 col-xs-12">
+				  	<div class="has-icon left-aligned">
+				  		<span class="svg-icon">
+				  			<img src="<?php echo get_stylesheet_directory_uri();?>/media/svg/icon-3.svg">
+				  		</span>
+				  		<div class="content">
+				  			<h4>Real Gaming Experince</h4>
+				  			<p>Each lesson includes a variety of pictures, puzles , multiple hoise questions and math based challenges.</p>
+				  		</div>
+				  	</div>
+				  	<div class="has-icon left-aligned">
+				  		<span class="svg-icon">
+				  			<img src="<?php echo get_stylesheet_directory_uri();?>/media/svg/icon-4.svg">
+				  		</span>
+				  		<div class="content">
+				  			<h4>Real Gaming Experince</h4>
+				  			<p>Each lesson includes a variety of pictures, puzles , multiple hoise questions and math based challenges.</p>
+				  		</div>
+				  	</div>
+				</div>
+
+			</div>
 		</div>
 	</section>
 

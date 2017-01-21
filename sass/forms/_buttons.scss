@@ -1,22 +1,15 @@
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-	border: 1px solid;
-	border-color: $color__border-button;
-	border-radius: 3px;
-	background: $color__background-button;
-	color: rgba(0, 0, 0, .8);
-	@include font-size(0.75);
-	line-height: 1;
-	padding: .6em 1em .4em;
+.btn{
+	&.sign-up{
+		padding:0.75rem 4.5rem;
+		border-radius: 2rem;
+		@include navBoxsadow();
+		cursor: pointer;
+		background-color: $color__background-body;
+		color: $color__background_start;
 
-	&:hover {
-		border-color: $color__border-button-hover;
-	}
-
-	&:active,
-	&:focus {
-		border-color: $color__border-button-focus;
+		&:hover{
+			background-color: $color__background-button;
+			color: $color__text-nav;
+		}
 	}
 }

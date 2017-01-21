@@ -67,7 +67,7 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   clear: both;
-  font-weight: 500; }
+  font-weight: 400; }
 
 .inner-block h1 {
   margin: 1rem 0  2rem;
@@ -79,6 +79,19 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1rem;
   font-weight: 400;
   line-height: 150%; }
+
+.has_background_image h1 {
+  margin-bottom: 4rem; }
+
+.has-icon {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
+  .has-icon h4 {
+    font-size: 20.8px;
+    font-size: 1.3rem;
+    margin-bottom: 10px; }
+
+.fornt-page_footer h2 {
+  margin-bottom: 2rem; }
 
 p {
   margin-bottom: 1.5em; }
@@ -187,32 +200,16 @@ table {
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  border: 1px solid;
-  border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
-  background: #e6e6e6;
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 12px;
-  font-size: 0.75rem;
-  line-height: 1;
-  padding: .6em 1em .4em; }
-  button:hover,
-  input[type="button"]:hover,
-  input[type="reset"]:hover,
-  input[type="submit"]:hover {
-    border-color: #ccc #bbb #aaa; }
-  button:active, button:focus,
-  input[type="button"]:active,
-  input[type="button"]:focus,
-  input[type="reset"]:active,
-  input[type="reset"]:focus,
-  input[type="submit"]:active,
-  input[type="submit"]:focus {
-    border-color: #aaa #bbb #bbb; }
+.btn.sign-up {
+  padding: 0.75rem 4.5rem;
+  border-radius: 2rem;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  background-color: #fff;
+  color: #3b92ff; }
+  .btn.sign-up:hover {
+    background-color: #f4cc20;
+    color: #fff; }
 
 input[type="text"],
 input[type="email"],
@@ -265,6 +262,12 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 .main-navigation .nav .nav-item a {
+  color: #fff; }
+
+.header-visible .main-navigation .nav .nav-item a {
+  color: royalblue; }
+
+.fornt-page_footer .nav .nav-link {
   color: #fff; }
 
 /*--------------------------------------------------------------
@@ -329,10 +332,13 @@ textarea {
 
 .middled-image img {
   display: block;
-  margin: 0 auto; }
+  margin: 1rem auto; }
 
 .text_center {
   text-align: center; }
+
+.left-aligned {
+  text-align: left; }
 
 /*--------------------------------------------------------------
 # Clearings
@@ -379,12 +385,29 @@ textarea {
 /* -------------------------------------------------------------
 ## Front Page Header
 ------------------------------------------------------------- */
-.font-page_header {
+body .site-header {
   position: fixed;
   width: 100%; }
-  .font-page_header .navbar-brand span {
+  body .site-header .navbar-brand img {
+    -webkit-transition: width 1s;
+    -moz-transition: width 1s;
+    -ms-transition: width 1s;
+    -o-transition: width 1s;
+    transition: width 1s; }
+  body .site-header .navbar-brand span {
     margin-left: 10px;
     color: #fff; }
+  body .site-header.header-visible {
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    z-index: 99; }
+    body .site-header.header-visible .navbar-brand span {
+      color: royalblue; }
+    body .site-header.header-visible .navbar-brand img {
+      width: 50px; }
+
+body:not(.home) .navbar-brand img {
+  width: 60px; }
 
 /*--------------------------------------------------------------
 ## Posts and pages
@@ -393,11 +416,14 @@ textarea {
 #page {
   position: relative; }
 
-/*-------- Home Page -------------*/
+/*-------- Pages -------------*/
 .banner-wapper {
   background: linear-gradient(-128deg, #3b92ff 0%, #50aecd 50%, #3bffe2 100%);
-  /* W3C */
-  height: 90vh; }
+  /* W3C */ }
+  .banner-wapper.front-page {
+    height: 90vh; }
+  .banner-wapper.inner-pages {
+    height: 70vh; }
   .banner-wapper .header-banner {
     background-image: url("media/svg/mountain.svg");
     background-attachment: fixed;
@@ -410,15 +436,21 @@ textarea {
       vertical-align: middle;
       text-align: center; }
 
+/*------- All Courses ------*/
+.all-courese .all-courese__wrapper {
+  margin-top: -20vh;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); }
+
 .image__intro {
-  padding: 3rem 0;
+  padding: 4rem 0;
   background-color: #f1f1f1; }
 
 .has_background_image {
   background-image: url("media/svg/grdient-bg.svg");
   background-attachment: fixed;
   background-size: cover;
-  padding: 3rem 0;
   color: #fff; }
 
 .sticky {
@@ -445,6 +477,13 @@ textarea {
   clear: both;
   margin: 0 0 1.5em; }
 
+.has-icon {
+  display: flex;
+  margin-bottom: 2rem; }
+  .has-icon span {
+    min-width: 64px;
+    margin-right: 15px; }
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -464,8 +503,10 @@ textarea {
 ## Front Page Footer
 ------------------------------------------------------------- */
 .fornt-page_footer {
-  height: 40vh;
-  background-image: linear-gradient(-135deg, #3f97f7 0%, #a23bff 100%); }
+  background-image: linear-gradient(-135deg, #3f97f7 0%, #a23bff 100%);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: #fff; }
 
 /*--------------------------------------------------------------
 # Infinite scroll

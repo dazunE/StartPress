@@ -31,6 +31,8 @@ gulp.task( 'server', function() {
   // Reload the browser if any .php file changes within this directory
   watch( './**/*.php', reload);
 
+  watch( './js/*.js', reload );
+
   // Recompile sass into CSS whenever we update any of the source files
   watch( './sass/**/*.scss', function() {
     gulp.start( 'scss' );
@@ -38,9 +40,9 @@ gulp.task( 'server', function() {
 
 
   // Watch our JavaScript files and report any errors. May ruin your day.
-  watch( './js/**/*.js', function() {
-    gulp.start( 'jshint' );
-  })
+  // watch( './js/**/*.js', function() {
+  //   gulp.start( 'jshint' );
+  // })
 });
 
 

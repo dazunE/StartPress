@@ -7,13 +7,12 @@
 @import 'pages/pages';
 
 .image__intro{
-	padding: 3rem 0;
+	padding: 4rem 0;
 	background-color: $color__background-screen;
 }
 
 .has_background_image{
 	@include backgroundImage('media/svg/grdient-bg.svg', fixed , cover);
-	padding: 3rem 0;
 	color: $color__background-body;
 }
 
@@ -45,4 +44,14 @@
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.has-icon{
+	display: flex;
+
+	span{
+	  min-width: 64px;
+	  margin-right: 15px;
+	}
+	margin-bottom: 2rem;
 }

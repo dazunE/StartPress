@@ -12,7 +12,75 @@
 ?>
 
 <footer class="fornt-page_footer">
-	
+	<div class="container text_center">
+		<h2>Education for everyone</h2>
+		<div class="row left-aligned">
+			<div class="col-md-3">
+				<nav class="nav flex-column">
+				  <li>
+				  	<a class="nav-link active" href="#">Active</a>
+				  </li>
+				  <li>
+				  	<a class="nav-link" href="#">Link</a>
+				  </li>
+				  <li>
+				  	<a class="nav-link" href="#">Link</a>
+				  </li>
+				  <li>
+				  	<a class="nav-link disabled" href="#">Disabled</a>
+				  </li>
+				</nav>
+			</div>
+			<div class="col-md-3">
+				<nav class="nav flex-column">
+				  <li>
+				  	<a class="nav-link active" href="#">Active</a>
+				  </li>
+				  <li>
+				  	<a class="nav-link" href="#">Link</a>
+				  </li>
+				  <li>
+				  	<a class="nav-link" href="#">Link</a>
+				  </li>
+				  <li>
+				  	<a class="nav-link disabled" href="#">Disabled</a>
+				  </li>
+				</nav>
+			</div>
+			<div class="col-md-3">
+				<nav class="nav flex-column">
+				  <li>
+				  	<a class="nav-link active" href="#">Active</a>
+				  </li>
+				  <li>
+				  	<a class="nav-link" href="#">Link</a>
+				  </li>
+				  <li>
+				  	<a class="nav-link" href="#">Link</a>
+				  </li>
+				  <li>
+				  	<a class="nav-link disabled" href="#">Disabled</a>
+				  </li>
+				</nav>
+			</div>
+			<div class="col-md-3">
+				<nav class="nav flex-column">
+				  <li>
+				  	<a class="nav-link active" href="#">Active</a>
+				  </li>
+				  <li>
+				  	<a class="nav-link" href="#">Link</a>
+				  </li>
+				  <li>
+				  	<a class="nav-link" href="#">Link</a>
+				  </li>
+				  <li>
+				  	<a class="nav-link disabled" href="#">Disabled</a>
+				  </li>
+				</nav>
+			</div>
+		</div>
+	</div>
 </footer>
 
 </div>

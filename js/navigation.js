@@ -32,10 +32,10 @@
 	 $(window).scroll(function() {    
 	    var scroll = $(window).scrollTop();
 
-	    if (scroll >= 500) {
-	        $("#masthead").addClass("darkHeader");
+	    if (scroll >= 200) {
+	        $("#masthead").addClass("header-visible");
 	    } else {
-	        $("#masthead").removeClass("darkHeader");
+	        $("#masthead").removeClass("header-visible");
 	    }
 	});
 

@@ -21,7 +21,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<header id="masthead" class="site-header font-page_header">
+	<header id="masthead" class="site-header">
 		<nav class="navbar navbar-toggleable-md main-navigation">
 			<!-- Site Branding -->
 		  	<a class="navbar-brand" href="<?php echo esc_url(home_url('/'));?>">
@@ -30,22 +30,22 @@
 			</a>
 			<!-- end branding -->
 		  	<!-- navigation -->
-			  <div class="collapse navbar-collapse">
-					<ul class="nav justify-content-end">
-					  <li class="nav-item">
-					    <a class="nav-link" href="#">Courses</a>
-					  </li>
-					  <li class="nav-item">
-					    <a class="nav-link" href="#">Instructors</a>
-					  </li>
-					  <li class="nav-item">
-					    <a class="nav-link" href="#">About Us</a>
-					  </li>
-					  <li class="nav-item">
-					    <a class="nav-link" href="#">Sign In</a>
-					  </li>
-					</ul>
-			  </div>
+			  <?php
+
+			  	   /**
+			  		* Displays a navigation menu
+			  		* @param array $args Arguments
+			  		*/
+			  		$args = array(
+			  			'theme_location' 	=> 'main-nav',
+			  			'menu_class'	 	=> 'nav justify-content-end',
+			  			'container'			=> 'nav',
+			  			'container_class'	=> 'collapse navbar-collapse'
+			  		);
+			  	
+			  		wp_nav_menu( $args );
+
+			  ?>
 		  	<!--end navigation -->
 		</nav>
 	</header>

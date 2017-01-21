@@ -14,11 +14,25 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<div id="post-<?php the_ID(); ?>" <?php post_class('page-content block'); ?>>
 
 			<?php
 			while ( have_posts() ) : the_post();
+
+			?>
+
+			<div class="inner-pages banner-wapper">
+				<div class="header-banner">
+					<div class="banner-caption justify-content-center">
+						<div class="container">
+							<?php the_title( '<h2>','</h2>' );?>
+						<h4>The function of education is to teach one to think intensively and to think critically. Intelligence plus character - that is the goal of true education.</h4>
+						</div>
+					</div>
+				</div>
+		    </div>
+
+		    <?php
 
 				get_template_part( 'template-parts/content', 'page' );
 
@@ -30,9 +44,8 @@ get_header(); ?>
 			endwhile; // End of the loop.
 			?>
 
-		</main><!-- #main -->
 	</div><!-- #primary -->
-
+ 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();

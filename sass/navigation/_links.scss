@@ -7,3 +7,23 @@
 		}
 	}
 }
+
+.header-visible{
+
+	.main-navigation{
+		.nav{
+			.nav-item{
+				a{
+					color: $color__link;
+				}
+			}
+		}
+	}
+}
+.fornt-page_footer{
+	.nav{
+		.nav-link{
+			color: $color__text-nav;
+		}
+	}
+}
