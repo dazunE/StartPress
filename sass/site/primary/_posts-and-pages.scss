@@ -55,3 +55,15 @@
 	}
 	margin-bottom: 2rem;
 }
+
+// Single Coures
+
+.single-coures__wrapper figure {
+	max-width: 300px;
+	margin-top: -10vh;
+
+	img{
+		border-radius: 50%;
+		@include navBoxsadow();
+	}
+}

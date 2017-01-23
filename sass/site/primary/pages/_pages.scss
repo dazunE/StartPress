@@ -10,6 +10,10 @@
 		height: 70vh;
 	}
 
+	&.single-course{
+		height: 50vh;
+	}
+
 
 	.header-banner{
 	 @include backgroundImage('media/svg/mountain.svg', fixed , cover);
@@ -20,18 +24,29 @@
 			display: table-cell;
 			vertical-align: middle;
 			text-align: center;
+			color: $color__text-nav;
+			text-shadow:0 2px 4px rgba(0,0,0,0.10);
 		}
 
 	}
 }
 
-/*------- All Courses ------*/
+/*------- All Wrappers------*/
 
-.all-courese{
-	.all-courese__wrapper{
+.all-types__wrapper{
 		margin-top: -20vh;
 		background-color: $color__background-body;
 		border-radius: 4px;
-		 @include navBoxsadow();
-	}
+		@include navBoxsadow();
+		padding: 15px 30px;
+}
+
+.single-coures__wrapper{
+	@extend .all-types__wrapper;
+	margin-top: -10vh;
+}
+
+.coures__item{
+
+
 }

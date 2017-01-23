@@ -33,3 +33,12 @@ h1, h2, h3, h4, h5, h6 {
 .fornt-page_footer h2{
 	margin-bottom: 2rem;
 }
+
+.all-course__wrapper{
+	.courese__description {
+		h3{
+			@include font-size(1.2);
+		}
+	}
+}
+

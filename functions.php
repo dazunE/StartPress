@@ -67,6 +67,8 @@ function start_press_setup() {
 
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
+
+	add_theme_support( 'sensei' );
 }
 endif;
 add_action( 'after_setup_theme', 'start_press_setup' );
@@ -171,3 +173,15 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Load Sensei compatibility file.
+ */
+
+require get_template_directory() . '/inc/theme-compatibility.php';
+
+/**
+ * Load Shortcodes
+ */
+
+require get_template_directory() . '/inc/shortcodes-master.php';
