@@ -18,7 +18,7 @@ get_header(); ?>
 		?>
 
 		<div class="single-course banner-wapper">
-				<div class="header-banner">
+				<div class="header-banner" <?php get_featured_image_as_background(get_the_ID());?>>
 					<div class="banner-caption justify-content-center">
 						<div class="container">
 						<?php the_title( '<h2>','</h2>' );?>
