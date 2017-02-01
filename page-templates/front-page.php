@@ -22,6 +22,8 @@ get_header();
 		<div class="front-page banner-wapper">
 			<div class="header-banner">
 				<div class="banner-caption justify-content-center">
+					<h3>GET THE HEAD START YOU DESERVE</h3>
+					<h1>Increase your chances of being employed</h1>
 					<button class="btn btn-lg sign-up">Get Started</button>
 				</div>
 			</div>
