@@ -77,5 +77,72 @@ function get_featured_image_as_background ( $id ){
 	}
 }
 
+function modify_quest_post_type () {
+
+
+	$args = array(
+
+		'label'					=> __('Quests', 'start-press'),
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'menu_icon'             => 'dashicons-welcome-learn-more',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,		
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page'
+	);
+
+	register_post_type('quest' ,$args );
+
+}
+
+add_action( 'init' , 'modify_quest_post_type' );
+
+function start_press_quests_types() {
+
+	$labels = array(
+		'name'                       => _x( 'Quest Types', 'Taxonomy General Name', 'start-press' ),
+		'singular_name'              => _x( 'Quest Type', 'Taxonomy Singular Name', 'start-press' ),
+		'menu_name'                  => __( 'Quest Types', 'start-press' ),
+		'all_items'                  => __( 'All Types', 'start-press' ),
+		'parent_item'                => __( 'Parent Type', 'start-press' ),
+		'parent_item_colon'          => __( 'Parent Type:', 'start-press' ),
+		'new_item_name'              => __( 'New Type Name', 'start-press' ),
+		'add_new_item'               => __( 'Add New Type', 'start-press' ),
+		'edit_item'                  => __( 'Edit Type', 'start-press' ),
+		'update_item'                => __( 'Update Type', 'start-press' ),
+		'view_item'                  => __( 'View Type', 'start-press' ),
+		'separate_items_with_commas' => __( 'Separate types with commas', 'start-press' ),
+		'add_or_remove_items'        => __( 'Add or remove types', 'start-press' ),
+		'choose_from_most_used'      => __( 'Choose from the most used', 'start-press' ),
+		'popular_items'              => __( 'Popular types', 'start-press' ),
+		'search_items'               => __( 'Search Types', 'start-press' ),
+		'not_found'                  => __( 'Not Found', 'start-press' ),
+		'no_terms'                   => __( 'No Types', 'start-press' ),
+		'items_list'                 => __( 'Types list', 'start-press' ),
+		'items_list_navigation'      => __( 'Types list navigation', 'start-press' ),
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => false,
+		'show_in_rest'               => true,
+	);
+	register_taxonomy( 'quest-category', array( 'quest' ), $args );
+
+}
+
+add_action( 'init', 'start_press_quests_types', 0 );
+
+
 
 

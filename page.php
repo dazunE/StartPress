@@ -26,7 +26,7 @@ get_header(); ?>
 					<div class="banner-caption justify-content-center">
 						<div class="container">
 							<?php the_title( '<h2>','</h2>' );?>
-						<h4>The function of education is to teach one to think intensively and to think critically. Intelligence plus character - that is the goal of true education.</h4>
+							<h4><?php the_excerpt();?></h4>
 						</div>
 					</div>
 				</div>

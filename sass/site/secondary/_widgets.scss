@@ -6,3 +6,32 @@
 		max-width: 100%;
 	}
 }
+
+
+// Login with Ajax Module
+
+.sp-login{
+	.modal-content{
+		position: relative;
+
+		.close{
+			position: absolute;
+			z-index: 99;
+			right: 10px;
+			@include font-size(1.8);
+		}
+	}
+	.modal-body{
+		.lwa-default{
+			padding: 15px;
+		}
+
+		.form-group{
+			margin-top: 1rem;
+
+			.form-control{
+				width: 100%;
+			}
+		}
+	}
+}

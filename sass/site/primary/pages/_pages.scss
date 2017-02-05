@@ -36,7 +36,7 @@
 .all-types__wrapper{
 		margin-top: -20vh;
 		background-color: $color__background-body;
-		border-radius: 4px;
+		border-radius: 3px;
 		@include navBoxsadow();
 		padding: 15px 30px;
 }
@@ -46,7 +46,18 @@
 	margin-top: -10vh;
 }
 
-.coures__item{
+.inner-pages{
+	&.block{
+		.container{
+			@extend .single-coures__wrapper;
+			padding-top: 3rem;
+			padding-bottom: 3rem;
 
-
+			h3{
+				text-align: center;
+				@include font-size(1.9);
+				margin-bottom: 4rem;
+			}
+		}
+	}
 }

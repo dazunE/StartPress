@@ -38,3 +38,5 @@
 	 });
 
 })( jQuery );
+
+new WOW().init();
